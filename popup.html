@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Generator</title>
+        <link href="styles.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="shortcut icon" type="image/png" href="images/duckie_b.png?raw=true">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <p id = "thetitle">Passwords for LIFE</p>
+            <img id = "pen5" src="images/pen_5.gif">
+            <hr> 
+
+        </div>
+        <div>
+        <p>Use the "Generate password" button to make a new password. Copy/paste the password when needed using ctrl-c and ctrl-v. </p> 
+        <p>Always remember to clear your clipboard when you're done!</p>
+        </div>
+        <div style = "padding-bottom: 10px;">
+            <hr> 
+            <div>
+                <!--label for="passwordLength">Password Length:</label-->
+                <input type="range" min="8" max="25" value="20" id="passwordLength" class="slider">
+                <div class="container" >
+                
+                <p>Password Length:</p>
+                <p id="lengthValue" style = "padding-left: 5px;">20</p> <p style = "padding-left: 5px;">characters</p>
+                </div>
+              </div>
+              <div>
+        </div>
+        <div class= "container">
+        <!--button id="centerbutton" type="button" onclick="passGen()">Generate password</button-->
+        <p>Password:</p>
+        <p id="passwd" style = "padding-left: 5px;">________________</p>
+        <p id = "item3" style="display: none; padding-left: 5px;">********************</p>
+    </div>
+        <div class ="container" id = "cont1" ><p style ="padding-right: 5px;">Status:</p><p id="status">No password yet!</p></div>
+        
+        <div class="container">
+        <button id="generatePasswordBtn">Generate Password</button> <p style ="padding-right: 5px;"></p>
+        <button id="hideButton" >Hide/Show password</button> <!--make a prompt for this in the js file, currently set to row1
+        <button type="button" onclick="removeEntry">Remove Row</button>  -->     
+        </div>
+        </div>
+   
+
+        
+       <script src = "password.js"></script>
+
+    <script>
+    const generatePasswordBtn = document.getElementById("generatePasswordBtn");
+    const hideButton = document.getElementById("hideButton");
+    generatePasswordBtn.addEventListener("click", passGen);
+    //hideButton.addEventListener("click", hide('passwd'));
+      hideButton.addEventListener("click", function() { hide('passwd'); }); // Pass argument
+  </script>
+
+
+
+    
+
+
+
+
+
+
+    </body>
+    
+</html>
